@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player(DayAndNight)/NightPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NightBegins.tscn" type="PackedScene" id=2]
 [ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=3]
-[ext_resource path="res://DayBegins.tscn" type="PackedScene" id=4]
+[ext_resource path="res://FireTakesUBack.tscn" type="PackedScene" id=4]
+[ext_resource path="res://DayBegins.tscn" type="PackedScene" id=5]
 
-[node name="World9" type="Node2D"]
+[node name="World9" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -35,11 +36,16 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196600, 0, 196608, 196601, 0, 196609, 196602, 0, 196609, 196603, 0, 196609, 196604, 0, 196609, 196605, 0, 196609, 196606, 0, 196609, 196607, 0, 196609, 131072, 0, 196609, 131073, 0, 196609, 131074, 0, 196609, 131075, 0, 196609, 131076, 0, 196609, 131077, 0, 196609, 131078, 0, 196609, 131079, 0, 196609, 131080, 0, 196609, 131081, 0, 196609, 131082, 0, 196609, 131083, 0, 196609, 131084, 0, 196609, 131085, 0, 196609, 131086, 0, 196609, 131087, 0, 196609, 131088, 0, 196609, 131089, 0, 196609, 131090, 0, 196609, 131091, 0, 196609, 131092, 0, 196609, 131093, 0, 196609, 131094, 0, 196609, 131095, 0, 196609, 131096, 0, 196609, 131097, 0, 196609, 131098, 0, 196609, 131099, 0, 196609, 131100, 0, 196609, 131101, 0, 196610 )
+tile_data = PoolIntArray( 196600, 0, 196608, 196601, 0, 196609, 196602, 0, 196609, 196603, 0, 196609, 196604, 0, 196609, 196605, 0, 196609, 196606, 0, 196609, 196607, 0, 196609, 131072, 0, 196609, 131073, 0, 196609, 131074, 0, 196609, 131075, 0, 196609, 131076, 0, 196609, 131077, 0, 196609, 131078, 0, 196610, 131080, 0, 196608, 131081, 0, 196609, 131082, 0, 196610, 131084, 0, 196608, 131085, 0, 196609, 131086, 0, 196609, 131087, 0, 196609, 131088, 0, 196609, 131089, 0, 196609, 131090, 0, 196609, 131091, 0, 196609, 131092, 0, 196609, 131093, 0, 196609, 131094, 0, 196609, 131095, 0, 196609, 131096, 0, 196609, 131097, 0, 196609, 131098, 0, 196609, 131099, 0, 196609, 131100, 0, 196609, 131101, 0, 196610 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="fire" parent="TileMap" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 987.949, 90.8016 )
+next_world = "res://Worlds/World8.tscn"
 
 [node name="Label" type="Label" parent="." index="3"]
 
@@ -64,7 +70,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="DayBegins" parent="." index="4" instance=ExtResource( 4 )]
+[node name="DayBegins" parent="." index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 913.977, 87.3678 )
 scale = Vector2( 1.2159, 1.07385 )
@@ -92,5 +98,15 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
+
+[node name="holefire" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 471.007, 206.478 )
+next_world = "res://Worlds/World8.tscn"
+
+[node name="holefire2" parent="." index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 726.876, 209.37 )
+next_world = "res://Worlds/World8.tscn"
 
 

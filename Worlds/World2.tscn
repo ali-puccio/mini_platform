@@ -6,7 +6,7 @@
 [ext_resource path="res://WorldComplete2.gd" type="Script" id=4]
 [ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=5]
 
-[node name="World2" type="Node" index="0"]
+[node name="World2" type="Node"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -15,12 +15,12 @@ position = Vector2( 87.6394, 297.07 )
 [node name="Fire2" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 470.986, 88.1456 )
-next_world = "res://Worlds/World.tscn"
+next_world = "res://World.tscn"
 
 [node name="Fire1" parent="." index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 343.175, 280.714 )
-next_world = "res://Worlds/World.tscn"
+next_world = "res://World.tscn"
 
 [node name="WorldComplete" parent="." index="3" instance=ExtResource( 3 )]
 

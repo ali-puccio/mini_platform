@@ -1,0 +1,147 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://FireTakesUBack.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fire.png" type="Texture" id=2]
+[ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=3]
+[ext_resource path="res://Player(DayAndNight)/FriMorningPlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Images/sun.svg" type="Texture" id=5]
+[ext_resource path="res://NightBegins.tscn" type="PackedScene" id=6]
+
+[node name="World14" type="Node2D"]
+
+[node name="fireee" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 2118.47, 458.013 )
+scale = Vector2( 0.992387, 0.968489 )
+next_world = "res://Worlds/World13.tscn"
+
+[node name="Fire9" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 849.323, 523.126 )
+scale = Vector2( 0.992387, 0.968489 )
+next_world = "res://Worlds/World13.tscn"
+
+[node name="Fire423" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 1358.76, 644.197 )
+scale = Vector2( 0.992387, 0.968489 )
+next_world = "res://Worlds/World13.tscn"
+
+[node name="FIRE" parent="." index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 1544.11, 521.831 )
+scale = Vector2( 0.992387, 0.968489 )
+next_world = "res://Worlds/World13.tscn"
+
+[node name="NIGHTIMAGE" type="Sprite" parent="." index="4"]
+
+position = Vector2( 1873.29, 1204.99 )
+scale = Vector2( 0.248602, 0.202451 )
+texture = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="." index="5"]
+
+scale = Vector2( 0.992387, 0.968489 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 196619, 0, 6, 196620, 0, 196609, 196621, 0, 196609, 196622, 0, 196609, 196623, 0, 196609, 196624, 0, 196609, 196625, 0, 196609, 196626, 0, 196609, 196627, 0, 196609, 196628, 0, 196609, 196629, 0, 196609, 196630, 0, 196609, 196631, 0, 196609, 196632, 0, 196609, 196633, 0, 196609, 196634, 0, 196609, 196635, 0, 196609, 196636, 0, 196609, 196637, 0, 196609, 196638, 0, 196609, 196639, 0, 196609, 196640, 0, 196609, 196641, 0, 196609, 196642, 0, 196609, 196643, 0, 7, 262155, 0, 65541, 262179, 0, 65541, 327691, 0, 131075, 327692, 0, 196609, 327693, 0, 196609, 327694, 0, 196609, 327695, 0, 196609, 327696, 0, 196609, 327697, 0, 196609, 327698, 0, 196609, 327699, 0, 7, 327715, 0, 65541, 393227, 0, 65541, 393235, 0, 131077, 393237, 0, 5, 393239, 0, 196608, 393240, 0, 196609, 393241, 0, 196610, 393243, 0, 196608, 393244, 0, 7, 393246, 0, 5, 393251, 0, 65541, 458763, 0, 65541, 458765, 0, 196613, 458773, 0, 65541, 458780, 0, 65541, 458782, 0, 65542, 458783, 0, 196609, 458784, 0, 196610, 458787, 0, 65541, 524299, 0, 65541, 524302, 0, 196608, 524303, 0, 196609, 524304, 0, 196609, 524305, 0, 196610, 524307, 0, 196613, 524309, 0, 65542, 524310, 0, 196610, 524314, 0, 196613, 524316, 0, 65541, 524323, 0, 65541, 589835, 0, 65541, 589852, 0, 131075, 589853, 0, 196609, 589854, 0, 196609, 589855, 0, 196609, 589856, 0, 7, 589859, 0, 65541, 655371, 0, 131075, 655372, 0, 196609, 655373, 0, 196610, 655375, 0, 196608, 655376, 0, 196610, 655378, 0, 196608, 655379, 0, 196609, 655380, 0, 196610, 655382, 0, 196608, 655383, 0, 196609, 655384, 0, 196609, 655385, 0, 196609, 655386, 0, 7, 655388, 0, 131077, 655392, 0, 65542, 655393, 0, 196610, 655395, 0, 65541, 720907, 0, 65541, 720922, 0, 65541, 720926, 0, 196613, 720931, 0, 65541, 786443, 0, 65541, 786445, 0, 196608, 786446, 0, 196609, 786447, 0, 196610, 786450, 0, 196608, 786451, 0, 196609, 786452, 0, 196609, 786453, 0, 196609, 786454, 0, 196609, 786455, 0, 196610, 786458, 0, 65542, 786459, 0, 196609, 786460, 0, 196609, 786461, 0, 196610, 786463, 0, 196608, 786464, 0, 196610, 786467, 0, 65541, 851979, 0, 65541, 852003, 0, 65541, 917515, 0, 131075, 917516, 0, 196609, 917517, 0, 196609, 917518, 0, 196609, 917519, 0, 196609, 917520, 0, 196609, 917521, 0, 196609, 917522, 0, 196609, 917523, 0, 196609, 917524, 0, 196609, 917525, 0, 196609, 917526, 0, 196609, 917527, 0, 196609, 917528, 0, 196609, 917529, 0, 196609, 917530, 0, 196609, 917531, 0, 196609, 917532, 0, 196609, 917533, 0, 196609, 917534, 0, 196609, 917535, 0, 196609, 917536, 0, 7, 917539, 0, 65541, 983051, 0, 65541, 983072, 0, 65541, 983075, 0, 65541, 1048587, 0, 65541, 1048608, 0, 131077, 1048611, 0, 65541, 1114123, 0, 65541, 1114147, 0, 65541, 1179659, 0, 65541, 1179683, 0, 65541, 1245195, 0, 65541, 1245211, 0, 196608, 1245212, 0, 196610, 1245214, 0, 196608, 1245215, 0, 196609, 1245216, 0, 196609, 1245217, 0, 196609, 1245218, 0, 196609, 1245219, 0, 196612, 1310731, 0, 65541, 1310755, 0, 65541, 1376267, 0, 65541, 1376291, 0, 65541, 1441803, 0, 65541, 1441827, 0, 65541, 1507339, 0, 65541, 1507363, 0, 65541, 1572875, 0, 65541, 1572899, 0, 65541, 1638411, 0, 65541, 1638435, 0, 65541, 1703947, 0, 65541, 1703971, 0, 65541, 1769483, 0, 65542, 1769484, 0, 196609, 1769485, 0, 196609, 1769486, 0, 196609, 1769487, 0, 196609, 1769488, 0, 196609, 1769489, 0, 196609, 1769490, 0, 196609, 1769491, 0, 196609, 1769492, 0, 196609, 1769493, 0, 196609, 1769494, 0, 196609, 1769495, 0, 196609, 1769496, 0, 196609, 1769497, 0, 196609, 1769498, 0, 196609, 1769499, 0, 196609, 1769500, 0, 196609, 1769501, 0, 196609, 1769502, 0, 196609, 1769503, 0, 196609, 1769504, 0, 196609, 1769505, 0, 196609, 1769506, 0, 196609, 1769507, 0, 65543 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 849.312, 279.128 )
+scale = Vector2( 0.992387, 0.968489 )
+
+[node name="FIRE1" parent="." index="7" instance=ExtResource( 1 )]
+
+position = Vector2( 1104.26, 642.998 )
+scale = Vector2( 0.992387, 0.968489 )
+next_world = "res://Worlds/World13.tscn"
+
+[node name="Area2D" type="Area2D" parent="." index="8"]
+
+position = Vector2( 792.915, 279.911 )
+scale = Vector2( 0.0993951, 0.100362 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="sun" type="Sprite" parent="Area2D" index="0"]
+
+position = Vector2( 1.97461, 0 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
+
+position = Vector2( 11.8828, -8.46045 )
+scale = Vector2( 32.9285, 29.2515 )
+
+[node name="NightBegins" parent="." index="9" instance=ExtResource( 6 )]
+
+position = Vector2( 2157.09, 1115.45 )
+scale = Vector2( 2.04513, 1.86983 )
+next_world = "res://World15.tscn"
+
+[node name="Label" type="Label" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 758.0
+margin_top = 323.0
+margin_right = 961.0
+margin_bottom = 383.0
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "FRIDAY MORNING"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Fire2" parent="." index="11" instance=ExtResource( 1 )]
+
+position = Vector2( 1674.14, 397.584 )
+next_world = "res://Worlds/World13.tscn"
+
+[node name="Fire3" parent="." index="12" instance=ExtResource( 1 )]
+
+position = Vector2( 1229.64, 456.719 )
+next_world = "res://Worlds/World13.tscn"
+
+[node name="fireeee" parent="." index="13" instance=ExtResource( 1 )]
+
+position = Vector2( 1929.49, 763.962 )
+next_world = "res://Worlds/World13.tscn"
+
+

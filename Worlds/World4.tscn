@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player(DayAndNight)/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=2]
 [ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://FireTakesUBack.tscn" type="PackedScene" id=4]
 
 [node name="World4" type="Node2D"]
 
@@ -39,5 +40,15 @@ __meta__ = {
 
 position = Vector2( 352.668, 151.268 )
 next_world = "res://Worlds/World5.tscn"
+
+[node name="Fire1" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 666.551, 397.779 )
+next_world = "res://Worlds/World3.tscn"
+
+[node name="Fire2" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 853.297, 149.269 )
+next_world = "res://Worlds/World3.tscn"
 
 

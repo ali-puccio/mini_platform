@@ -6,30 +6,41 @@
 [ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=4]
 [ext_resource path="res://NightBegins.tscn" type="PackedScene" id=5]
 
-[node name="World8" type="Node2D"]
+[node name="World8" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 170.174, 101.729 )
+position = Vector2( 155.718, 100.283 )
 
-[node name="Fire2" parent="." index="1" instance=ExtResource( 2 )]
+[node name="NightBegins" parent="Player" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 956.261, 52.9308 )
+next_world = "res://Worlds/World7.tscn"
+
+[node name="HoleFire1" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 665.583, 152.414 )
+scale = Vector2( 1, 0.968489 )
+next_world = "res://Worlds/World7.tscn"
+
+[node name="Fire2" parent="." index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 885.978, 86.6015 )
 scale = Vector2( 1.00765, 0.99199 )
 next_world = "res://Worlds/World7.tscn"
 
-[node name="Fire1" parent="." index="2" instance=ExtResource( 2 )]
+[node name="Fire1" parent="." index="3" instance=ExtResource( 2 )]
 
 position = Vector2( 518.601, 85.669 )
 scale = Vector2( 1.00765, 0.99199 )
 next_world = "res://Worlds/World7.tscn"
 
-[node name="DayBegins" parent="." index="3" instance=ExtResource( 3 )]
+[node name="DayBegins" parent="." index="4" instance=ExtResource( 3 )]
 
 position = Vector2( 96.304, 93.9972 )
 scale = Vector2( 1, 0.968489 )
 
-[node name="TileMap" type="TileMap" parent="." index="4"]
+[node name="TileMap" type="TileMap" parent="." index="5"]
 
 scale = Vector2( 1, 0.968489 )
 mode = 0
@@ -48,13 +59,13 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196601, 0, 196608, 196602, 0, 196609, 196603, 0, 196609, 196604, 0, 196609, 196605, 0, 196609, 196606, 0, 196609, 196607, 0, 196609, 131072, 0, 196609, 131073, 0, 196609, 131074, 0, 196609, 131075, 0, 196609, 131076, 0, 196609, 131077, 0, 196609, 131078, 0, 196609, 131079, 0, 196609, 131080, 0, 196609, 131081, 0, 196609, 131082, 0, 196609, 131083, 0, 196609, 131084, 0, 196609, 131085, 0, 196609, 131086, 0, 196609, 131087, 0, 196609, 131088, 0, 196609, 131089, 0, 196609, 131090, 0, 196609, 131091, 0, 196609, 131092, 0, 196609, 131093, 0, 196609, 131094, 0, 196609, 131095, 0, 196609, 131096, 0, 196609, 131097, 0, 196609, 131098, 0, 196609, 131099, 0, 196609, 131100, 0, 196609, 131101, 0, 196610 )
+tile_data = PoolIntArray( 196601, 0, 196608, 196602, 0, 196609, 196603, 0, 196609, 196604, 0, 196609, 196605, 0, 196609, 196606, 0, 196609, 196607, 0, 196609, 131072, 0, 196609, 131073, 0, 196609, 131074, 0, 196609, 131075, 0, 196609, 131076, 0, 196609, 131077, 0, 196609, 131078, 0, 196609, 131079, 0, 196609, 131080, 0, 196609, 131081, 0, 196610, 131083, 0, 196608, 131084, 0, 196609, 131085, 0, 196609, 131086, 0, 196609, 131087, 0, 196609, 131088, 0, 196610, 131090, 0, 196608, 131091, 0, 196609, 131092, 0, 196609, 131093, 0, 196609, 131094, 0, 196609, 131095, 0, 196609, 131096, 0, 196609, 131097, 0, 196609, 131098, 0, 196609, 131099, 0, 196609, 131100, 0, 196609, 131101, 0, 196610 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ESDAYMORNING" type="Label" parent="." index="5"]
+[node name="ESDAYMORNING" type="Label" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -77,13 +88,13 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="NightBegins" parent="." index="6" instance=ExtResource( 5 )]
+[node name="NightBegins" parent="." index="7" instance=ExtResource( 5 )]
 
 position = Vector2( 1246.62, 91.9498 )
 scale = Vector2( 0.978073, 0.982884 )
 next_world = "res://Worlds/World9.tscn"
 
-[node name="TUE" type="Label" parent="." index="7"]
+[node name="TUE" type="Label" parent="." index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0

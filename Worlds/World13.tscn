@@ -14,7 +14,7 @@ position = Vector2( 170.055, 96.5448 )
 
 [node name="Fire1" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 321.677, 87.7309 )
+position = Vector2( 411.578, 85.0473 )
 next_world = "res://Worlds/World12.tscn"
 
 [node name="Fire3" parent="." index="2" instance=ExtResource( 3 )]
@@ -30,7 +30,7 @@ next_world = "res://Worlds/World12.tscn"
 
 [node name="Fire5" parent="." index="4" instance=ExtResource( 2 )]
 
-position = Vector2( 799.086, 90.9871 )
+position = Vector2( 756.148, 89.6453 )
 next_world = "res://Worlds/World12.tscn"
 
 [node name="Fire6" parent="." index="5" instance=ExtResource( 2 )]
@@ -90,7 +90,7 @@ _sections_unfolded = [ "Rect" ]
 
 position = Vector2( 1259.64, 88.6202 )
 scale = Vector2( 1.2159, 1.07385 )
-next_world = "res://Worlds/World3.tscn"
+next_world = "res://World14.tscn"
 
 [node name="Previous Fire" parent="DayBegins" index="2" instance=ExtResource( 2 )]
 
