@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player(DayAndNight)/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=3]
+
+[node name="World3" type="Node"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 863.212, 163.18 )
+
+[node name="WorldComplete" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 991.715, 656.198 )
+next_world = "res://Worlds/World4.tscn"
+
+[node name="WorldComplete2" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 480.229, 652.113 )
+next_world = "res://Worlds/World4.tscn"
+
+[node name="TileMap" type="TileMap" parent="." index="3"]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65539, 0, 6, 65540, 0, 196609, 65541, 0, 196609, 65542, 0, 196609, 65543, 0, 196609, 65544, 0, 196609, 65545, 0, 196609, 65546, 0, 196609, 65547, 0, 196609, 65548, 0, 196609, 65549, 0, 196609, 65550, 0, 196609, 65551, 0, 196609, 65552, 0, 7, 131075, 0, 65541, 131088, 0, 65541, 196611, 0, 65541, 196613, 0, 1, 196614, 0, 2, 196616, 0, 196608, 196617, 0, 196609, 196618, 0, 196609, 196619, 0, 131076, 196620, 0, 196609, 196621, 0, 196609, 196622, 0, 7, 196624, 0, 65541, 262147, 0, 65541, 262149, 0, 131073, 262150, 0, 131074, 262155, 0, 65541, 262158, 0, 65541, 262160, 0, 65541, 327683, 0, 65541, 327685, 0, 65537, 327686, 0, 65547, 327687, 0, 196609, 327688, 0, 196609, 327689, 0, 196610, 327691, 0, 65541, 327694, 0, 65541, 327696, 0, 65541, 393219, 0, 65541, 393227, 0, 65541, 393230, 0, 131077, 393232, 0, 65541, 458755, 0, 131075, 458756, 0, 196609, 458757, 0, 196609, 458758, 0, 196610, 458760, 0, 196608, 458761, 0, 196609, 458762, 0, 196609, 458763, 0, 65543, 458768, 0, 65541, 524291, 0, 65541, 524304, 0, 65541, 589827, 0, 65541, 589840, 0, 65541, 655363, 0, 65541, 655376, 0, 65541, 720899, 0, 65541, 720912, 0, 65541, 786435, 0, 65542, 786436, 0, 196609, 786437, 0, 196609, 786438, 0, 196609, 786439, 0, 196609, 786440, 0, 196609, 786441, 0, 196609, 786442, 0, 196609, 786443, 0, 196609, 786444, 0, 196609, 786445, 0, 196609, 786446, 0, 196609, 786447, 0, 196609, 786448, 0, 65543 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+

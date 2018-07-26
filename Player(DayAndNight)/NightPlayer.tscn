@@ -1,0 +1,120 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://PlayerSet/Jump3.png" type="Texture" id=2]
+[ext_resource path="res://PlayerSet/Jump1.png" type="Texture" id=3]
+[ext_resource path="res://PlayerSet/Idle0.png" type="Texture" id=4]
+[ext_resource path="res://PlayerSet/Run0.png" type="Texture" id=5]
+[ext_resource path="res://PlayerSet/Run1.png" type="Texture" id=6]
+[ext_resource path="res://PlayerSet/Run2.png" type="Texture" id=7]
+[ext_resource path="res://PlayerSet/Run3.png" type="Texture" id=8]
+[ext_resource path="res://PlayerSet/Run4.png" type="Texture" id=9]
+[ext_resource path="res://PlayerSet/Run7.png" type="Texture" id=10]
+[ext_resource path="res://Player(DayAndNight)/night.png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Ide",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Run",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 11.8916, 11.2452 )
+
+[node name="Player" type="KinematicBody2D"]
+
+position = Vector2( 413.113, 115.566 )
+scale = Vector2( 1, 0.968489 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( -1.68996, 0 )
+scale = Vector2( 0.906535, 1 )
+frames = SubResource( 1 )
+animation = "Jump"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -2.27704, -0.300074 )
+scale = Vector2( 1.18816, 2.50388 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Camera2D" index="0"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="Night" type="Sprite" parent="Camera2D/ParallaxBackground" index="0"]
+
+position = Vector2( 3.88596, 1.74937 )
+scale = Vector2( 1.70889, 1.54449 )
+texture = ExtResource( 11 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+

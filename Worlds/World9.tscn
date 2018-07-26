@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player(DayAndNight)/NightPlayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://NightBegins.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=3]
+[ext_resource path="res://DayBegins.tscn" type="PackedScene" id=4]
+
+[node name="World9" type="Node2D"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 170.055, 96.5448 )
+
+[node name="NightBegins" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 117.185, 94.0035 )
+scale = Vector2( 1, 0.968489 )
+
+[node name="TileMap" type="TileMap" parent="." index="2"]
+
+scale = Vector2( 1, 0.968489 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 196600, 0, 196608, 196601, 0, 196609, 196602, 0, 196609, 196603, 0, 196609, 196604, 0, 196609, 196605, 0, 196609, 196606, 0, 196609, 196607, 0, 196609, 131072, 0, 196609, 131073, 0, 196609, 131074, 0, 196609, 131075, 0, 196609, 131076, 0, 196609, 131077, 0, 196609, 131078, 0, 196609, 131079, 0, 196609, 131080, 0, 196609, 131081, 0, 196609, 131082, 0, 196609, 131083, 0, 196609, 131084, 0, 196609, 131085, 0, 196609, 131086, 0, 196609, 131087, 0, 196609, 131088, 0, 196609, 131089, 0, 196609, 131090, 0, 196609, 131091, 0, 196609, 131092, 0, 196609, 131093, 0, 196609, 131094, 0, 196609, 131095, 0, 196609, 131096, 0, 196609, 131097, 0, 196609, 131098, 0, 196609, 131099, 0, 196609, 131100, 0, 196609, 131101, 0, 196610 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 80.0
+margin_top = 135.0
+margin_right = 185.0
+margin_bottom = 149.0
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "TUESDAY NIGHT"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="DayBegins" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 913.977, 87.3678 )
+scale = Vector2( 1.2159, 1.07385 )
+next_world = "res://Worlds/World10.tscn"
+
+[node name="Label2" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 867.0
+margin_top = 134.0
+margin_right = 897.0
+margin_bottom = 148.0
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "WEDNESDAY MORNING"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+
