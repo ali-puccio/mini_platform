@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Player(DayAndNight)/NightPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://FireTakesUBack.tscn" type="PackedScene" id=2]
-[ext_resource path="res://NightBegins.tscn" type="PackedScene" id=3]
-[ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=4]
-[ext_resource path="res://DayBegins.tscn" type="PackedScene" id=5]
+[ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=3]
+[ext_resource path="res://DayBegins.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Images/Moon.png" type="Texture" id=5]
 
-[node name="World9" type="Node2D"]
+[node name="World9" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -17,32 +17,26 @@ position = Vector2( 170.055, 96.5448 )
 position = Vector2( 411.578, 85.0473 )
 next_world = "res://Worlds/World12.tscn"
 
-[node name="Fire3" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 117.185, 94.0035 )
-scale = Vector2( 1, 0.968489 )
-next_world = "res://Worlds/World12.tscn"
-
-[node name="Fire4" parent="." index="3" instance=ExtResource( 2 )]
+[node name="Fire4" parent="." index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 575.16, 18.5992 )
 next_world = "res://Worlds/World12.tscn"
 
-[node name="Fire5" parent="." index="4" instance=ExtResource( 2 )]
+[node name="Fire5" parent="." index="3" instance=ExtResource( 2 )]
 
 position = Vector2( 756.148, 89.6453 )
 next_world = "res://Worlds/World12.tscn"
 
-[node name="Fire6" parent="." index="5" instance=ExtResource( 2 )]
+[node name="Fire6" parent="." index="4" instance=ExtResource( 2 )]
 
 position = Vector2( 1026.52, 94.9948 )
 next_world = "res://Worlds/World12.tscn"
 
-[node name="TileMap" type="TileMap" parent="." index="6"]
+[node name="TileMap" type="TileMap" parent="." index="5"]
 
 scale = Vector2( 1, 0.968489 )
 mode = 0
-tile_set = ExtResource( 4 )
+tile_set = ExtResource( 3 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -63,7 +57,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="." index="7"]
+[node name="Label" type="Label" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -86,7 +80,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="DayBegins" parent="." index="8" instance=ExtResource( 5 )]
+[node name="DayBegins" parent="." index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 1259.64, 88.6202 )
 scale = Vector2( 1.2159, 1.07385 )
@@ -97,7 +91,7 @@ next_world = "res://World14.tscn"
 position = Vector2( -1007.29, 6.16946 )
 next_world = "res://Worlds/World11.tscn"
 
-[node name="Label2" type="Label" parent="." index="9"]
+[node name="Label2" type="Label" parent="." index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -119,5 +113,11 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
+
+[node name="Moon" type="Sprite" parent="." index="9"]
+
+position = Vector2( 118.329, 97.0619 )
+scale = Vector2( 0.0995028, 0.103675 )
+texture = ExtResource( 5 )
 
 

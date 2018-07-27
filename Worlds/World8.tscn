@@ -2,9 +2,10 @@
 
 [ext_resource path="res://Player(DayAndNight)/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://FireTakesUBack.tscn" type="PackedScene" id=2]
-[ext_resource path="res://DayBegins.tscn" type="PackedScene" id=3]
-[ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=4]
-[ext_resource path="res://NightBegins.tscn" type="PackedScene" id=5]
+[ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=3]
+[ext_resource path="res://NightBegins.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sun.svg" type="Texture" id=5]
+
 
 [node name="World8" type="Node2D" index="0"]
 
@@ -31,20 +32,15 @@ next_world = "res://Worlds/World7.tscn"
 
 [node name="Fire1" parent="." index="3" instance=ExtResource( 2 )]
 
-position = Vector2( 518.601, 85.669 )
+position = Vector2( 405.845, 85.669 )
 scale = Vector2( 1.00765, 0.99199 )
 next_world = "res://Worlds/World7.tscn"
 
-[node name="DayBegins" parent="." index="4" instance=ExtResource( 3 )]
-
-position = Vector2( 96.304, 93.9972 )
-scale = Vector2( 1, 0.968489 )
-
-[node name="TileMap" type="TileMap" parent="." index="5"]
+[node name="TileMap" type="TileMap" parent="." index="4"]
 
 scale = Vector2( 1, 0.968489 )
 mode = 0
-tile_set = ExtResource( 4 )
+tile_set = ExtResource( 3 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -65,7 +61,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ESDAYMORNING" type="Label" parent="." index="6"]
+[node name="ESDAYMORNING" type="Label" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -88,13 +84,13 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="NightBegins" parent="." index="7" instance=ExtResource( 5 )]
+[node name="NightBegins" parent="." index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 1246.62, 91.9498 )
 scale = Vector2( 0.978073, 0.982884 )
 next_world = "res://Worlds/World9.tscn"
 
-[node name="TUE" type="Label" parent="." index="8"]
+[node name="TUE" type="Label" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -116,5 +112,11 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
+
+[node name="sun" type="Sprite" parent="." index="8"]
+
+position = Vector2( 99.1159, 93.1739 )
+scale = Vector2( 0.097003, 0.104059 )
+texture = ExtResource( 5 )
 
 

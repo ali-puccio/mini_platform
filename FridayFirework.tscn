@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://WorldComplete.gd" type="Script" id=1]
-[ext_resource path="res://Images/Moon.png" type="Texture" id=2]
+[ext_resource path="res://firework.svg" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -10,7 +10,7 @@ extents = Vector2( 32, 32 )
 
 [node name="NightBegins" type="Area2D"]
 
-position = Vector2( -2.03845, 1.35897 )
+position = Vector2( -20, 0 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -25,16 +25,17 @@ __meta__ = {
 }
 next_world = null
 
-[node name="icon" type="Sprite" parent="." index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-scale = Vector2( 0.105568, 0.113019 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Pause", "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-
-position = Vector2( 0.188553, 0.339741 )
+position = Vector2( 8.01608, 7.22111 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Z Index" ]
+
+[node name="icon" type="Sprite" parent="." index="1"]
+
+position = Vector2( 4.10554, 7.89773 )
+scale = Vector2( 0.139206, 0.125102 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Pause", "Transform" ]
 
 
