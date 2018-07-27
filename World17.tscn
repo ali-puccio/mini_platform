@@ -1,13 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://SATMORNFINAL.tscn" type="PackedScene" id=1]
 [ext_resource path="res://DirtAutoFile.tres" type="TileSet" id=2]
-[ext_resource path="res://Saturday Stuff/SatPlayer.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Saturday Stuff/son.png" type="Texture" id=4]
-[ext_resource path="res://Saturday Stuff/snoopy.png" type="Texture" id=5]
-[ext_resource path="res://Saturday Stuff/FoundMom.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Saturday Stuff/snoopy.png" type="Texture" id=3]
+[ext_resource path="res://Saturday Stuff/MomSatPlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Saturday Stuff/FoundSon.tscn" type="PackedScene" id=5]
 
-[node name="World15" type="Node2D"]
+[node name="World15" type="Node2D" index="0"]
 
 position = Vector2( 0, -30 )
 
@@ -179,23 +178,13 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="Player" parent="." index="8" instance=ExtResource( 3 )]
-
-position = Vector2( 2075.13, 333.638 )
-
-[node name="son" type="Sprite" parent="." index="9"]
-
-position = Vector2( 551.525, 2429.24 )
-scale = Vector2( 0.027764, 0.0230362 )
-texture = ExtResource( 4 )
-
-[node name="snoopy" type="Sprite" parent="." index="10"]
+[node name="snoopy" type="Sprite" parent="." index="8"]
 
 position = Vector2( 2467.78, 3340.75 )
 scale = Vector2( 0.303944, 0.242042 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="." index="11"]
+[node name="Label" type="Label" parent="." index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -218,9 +207,13 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="WorldComplete" parent="." index="12" instance=ExtResource( 6 )]
+[node name="Player" parent="." index="10" instance=ExtResource( 4 )]
 
-position = Vector2( 2463.97, 1881.7 )
-next_world = "res://World17.tscn"
+position = Vector2( 2434.96, 1865.37 )
+
+[node name="WorldComplete" parent="." index="11" instance=ExtResource( 5 )]
+
+position = Vector2( 544.714, 2445.13 )
+next_world = "res://World18.tscn"
 
 

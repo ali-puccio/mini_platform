@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/firework.svg-10d19ec8288921e2472d87d87e250f03.stex"
+path="res://.import/balloons.png-39ef3a63f9869b30306edac1715cb08e.stex"
 
 [deps]
 
-source_file="res://firework.svg"
-dest_files=[ "res://.import/firework.svg-10d19ec8288921e2472d87d87e250f03.stex" ]
+source_file="res://Saturday Stuff/balloons.png"
+dest_files=[ "res://.import/balloons.png-39ef3a63f9869b30306edac1715cb08e.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

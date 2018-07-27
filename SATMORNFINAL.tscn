@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://FridayFirework.tscn" type="PackedScene" id=1]
+
+[node name="SATMORN" type="Area2D"]
+
+position = Vector2( 30, -30 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SAT MORN" type="Label" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 960.0
+margin_top = 2330.0
+margin_right = 1097.0
+margin_bottom = 2359.0
+rect_scale = Vector2( 8, 8 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "SATURDAY MORNING"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="FIREWORK2" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 850, 2376 )
+scale = Vector2( 2.35156, 2.46875 )
+next_world = "res://World16.tscn"
+
+[node name="FIREWORK" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 2120, 2380 )
+scale = Vector2( 2.375, 2.35924 )
+next_world = "res://World16.tscn"
+
+
